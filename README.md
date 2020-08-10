@@ -2,11 +2,13 @@
 A python script that generates formatted box scores from Draft Day Sports College Basketball 2020 saved game data.
 
 ## How to use it
-python dds_game_log.py -t Longwood Drexel -f C:\Program Files (x86)\Steam\steamapps\common\Draft Day Sports College Basketball 2020\app\disk\saves\backups\Longwood\Longwood.cbb -to C:\Users\chris\Desktop
+c:\Users\chris\AppData\Local\Programs\Python\Python38-32\python.exe dds_game_log.py -f "C:\Program Files (x86)\Steam\steamapps\common\Draft Day Sports College Basketball 2020\app\disk\saves\backups\LongWood\LongWood.cbb" -to C:\Users\chris\Desktop -t Longwood "Wake Forest"
 
 Following `-t` should be the two teams that played in the game for which you want the box score
 Following `-f` should be a path to the .cbb saved game file
 Following `-to` should be a path to a directory where the box score file will be created.
+
+* Important note that on Windows filepaths with spaces need to be enclosed in quotations. Likewise team names with spaces, like "Wake Forest" need to be enclosed in quotations.
 
 An example of a generated box score: 
 ```
