@@ -10,6 +10,19 @@ Following `-to` should be a path to a directory where the box score file will be
 
 * Important note that on Windows filepaths with spaces need to be enclosed in quotations. Likewise team names with spaces, like "Wake Forest" need to be enclosed in quotations.
 
+## Nice Features
+1) The box score is sorted to place starters first by position (PG, SG, SF, PF, C) then bench players sorted by minutes played. Those who didn't play get a "DNP" for their stat row.
+2) The code pretty prints the box score so the spacing will always be right. You can adjust padding between columns by changing the `field_padding` parameter on the PrettyPrinter object.
+
+## Ideas for improvement
+1) Also generate csv so that these can be exported to excel, which could make for some cool statistical analyses. It shouldn't be too hard to do that with how the code is architected. The code is split into different sections - the first half parses the saved game file and creates player objects for each player. Then we pass these player objects into different `PlayerAnalyzer` objects. Currently we have three - one is untested: a TotalTracker which keeps track of the team totals as we iterate over each player, a FileWriter which writes output to a file, and a ConsoleWriter (untested) which should write output to the console. The FileWriter and ConsoleWriter both take a printer, in this case the `PrettyPrinter` class that does all of the formatting. To generate csv we should only need to create a CSVPrinter class to format the data in csv style, and we should be able to reuse the FileWriter and ConsoleWriter objects.
+
+2) Add team names to the box scores.
+
+3) Add a way to request only certain stat lines
+
+4) (this would require some pretty major work) Add a way to get cumulative team stats for the whole year
+
 An example of a generated box score: 
 ```
          Name            Min       FG        3PT       FT        OREB      DREB      REB      AST      STL      BLK      TO      PF      PTS      +/-   
