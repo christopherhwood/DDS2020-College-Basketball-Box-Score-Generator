@@ -173,7 +173,7 @@ class FileParser:
         return Player(name, next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), next(player_iter), get_starting_position(player_iter))
 
     def parse_players(self, mm, regex_str, players):
-        pattern = re.compile(regex_str)
+        pattern = re.compile(regex_str, re.DOTALL)
         # loop while span is not None
         span = (0, 0)
         while True:
@@ -209,10 +209,14 @@ class ProcessorManager:
     def process(self):
         # sort players so that we do starters by position first
         # and then in order of playing time.
+        def startersorter(player):
+            if int(player.get_starting_position()) == 0:
+                return 6
+            else:
+                return int(player.get_starting_position())
         self._players = sorted(
             self._players, key=lambda obj: int(obj.get_min()), reverse=True)
-        self._players = sorted(self._players, key=lambda obj: int(
-            obj.get_starting_position()), reverse=True)
+        self._players = sorted(self._players, key=startersorter)
         for player in self._players:
             for processor in self._processors:
                 processor.process_player(player)
@@ -342,7 +346,7 @@ class ConsoleWriter(PlayerProcessor):
 
 
 class PrettyPrinter(Printer):
-    def __init__(self, player_count, total_tracker, field_padding=6):
+    def __init__(self, player_count, total_tracker, field_padding=2):
         self._total_tracker = total_tracker
         self._field_padding = field_padding
 
@@ -448,12 +452,7 @@ class PrettyPrinter(Printer):
                 # space length is difference in longest field value + padding
                 space_length = self._max_value_length[field_index] - len(
                     field_value) + self._field_padding
-                # center each field name in the first row, but left-align other rows
-                # if (row == 0):
-                field_values[field_index] = (
-                    ' ' * math.floor(space_length / 2)) + field_value + (' ' * math.ceil(space_length / 2))
-                # else:
-                #field_values[field_index] = field_value + (' ' * space_length)
+                field_values[field_index] = field_value + (' ' * space_length)
             field_values.append('\n')
             self._lines[row] = ''.join(field_values)
 
@@ -517,7 +516,7 @@ class Player:
         return self._ftm
 
     def get_3pt(self):
-        return ''.join([self._tpa, '-', self._tpm])
+        return ''.join([self._tpm, '-', self._tpa])
 
     def get_ft(self):
         return ''.join([self._ftm, '-', self._fta])

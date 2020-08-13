@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "args": ["-t", "Longwood", "Drexel", "-f", "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Draft Day Sports College Basketball 2020\\app\\disk\\saves\\backups\\LongWood\\LongWood.cbb", "-to", "C:\\Users\\chris\\Desktop"],
+            "args": ["-t", "Longwood", "Charleston", "-f", "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Draft Day Sports College Basketball 2020\\app\\disk\\saves\\LongWood.cbb", "-to", "C:\\Users\\chris\\Desktop"],
             "console": "integratedTerminal"
         }
     ]
