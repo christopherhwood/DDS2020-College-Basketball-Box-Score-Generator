@@ -25,38 +25,39 @@ Following `-to` should be a path to a directory where the box score file will be
 
 An example of a generated box score: 
 ```
-         Name            Min       FG        3PT       FT        OREB      DREB      REB      AST      STL      BLK      TO      PF      PTS      +/-   
-    Todd Marshack        27        2-7       0-1       4-4        0         6         6        4        1        2       2       1        8        9    
-     Isaac Paben         21        4-5       0-1       0-0        0         3         3        4        2        0       3       2        8        8    
-   Jermaine Hanson       26        2-4       0-1       1-2        1         1         2        1        1        0       0       2        5       10    
-     Marcus Neely        21        5-9       0-1       1-3        1         1         2        1        1        2       1       2       11        6    
-    Kwame Williams       21        3-8       0-0       6-7        2         5         7        3        3        3       0       0       12       14    
-      Erik Green         18        1-2       0-0       5-6        0         5         5        1        0        0       1       2        7        5    
-      Paul Lilly         16        3-4       1-1       0-2        0         1         1        2        1        0       2       0        7        6    
-   Michael Everhart      14        2-7       1-3       2-2        0         2         2        0        1        0       3       3        7       -1    
-     Jim Braxton         13        0-3       0-0       0-0        0         2         2        0        0        1       1       2        0       -7    
-     Bobby Jones         13        2-3       0-0       2-2        1         3         4        1        1        0       0       0        6        1    
-     Darren Tuck          4        0-0       0-0       0-0        0         0         0        0        0        0       1       0        0        4    
-     Ray Herbert         DNP   
-     Derek Smith         DNP   
-    Matt Prescott        DNP   
-         TEAM                     24-52      2-8      21-28       5         29       34       17       11        8       14      14      71             
+Name              Min  FG     3PT  FT     OREB  DREB  REB  AST  STL  BLK  TO  PF  PTS  +/-  
+Todd Marshack     21   3-7    0-1  1-1    1     0     1    5    1    0    5   2   7    -4   
+Isaac Paben       28   3-8    1-2  1-1    2     3     5    3    2    0    1   4   8    4    
+Jermaine Hanson   19   4-7    0-1  0-0    0     5     5    2    0    1    0   5   8    1    
+Marcus Neely      29   6-10   0-1  1-2    2     7     9    4    0    3    2   4   13   -6   
+Kwame Williams    26   5-7    0-0  3-4    0     4     4    2    1    1    1   2   13   6    
+Paul Lilly        27   5-9    2-3  2-4    1     2     3    3    0    1    5   2   14   0    
+Erik Green        19   3-5    1-1  2-2    1     2     3    1    0    1    2   4   9    13   
+Bobby Jones       14   0-0    0-0  2-2    0     0     0    1    1    0    0   2   2    -8   
+Jim Braxton       10   2-3    0-0  1-2    0     0     0    0    1    0    0   1   5    -3   
+Michael Everhart  3    0-0    0-0  0-0    0     1     1    1    0    0    0   1   0    2    
+Darren Tuck       1    0-0    0-0  0-0    0     0     0    0    0    0    0   0   0    0    
+Ray Herbert       DNP  
+Derek Smith       DNP  
+Matt Prescott     DNP  
+TEAM                   31-56  4-9  13-18  7     24    31   22   6    7    16  27  79        
 
 
-       Name           Min       FG        3PT        FT        OREB      DREB      REB      AST      STL      BLK      TO      PF      PTS      +/-   
-   Jeremy Watson      29        2-4       1-3        0-0        0         2         2        2        0        0       5       2        5       -17   
-   Eddie Carroll      23        3-6       2-4        3-4        0         2         2        3        2        0       0       4       11       -4    
-    Mark Givens       27        4-7       2-4        2-2        1         6         7        3        0        0       2       2       12       -6    
-   Kevin Bartow       31        3-5       0-0        3-6        0         5         5        1        0        0       2       3        9       -14   
-   Jeremy Allen       29       5-13       0-0        2-3        2         5         7        1        0        0       1       2       12       -7    
-   Joey Thompson      19        1-6       1-5        3-4        0         1         1        0        0        0       2       1        6       -4    
-   Carl Daniels       13        0-4       0-0        0-0        1         1         2        2        0        1       5       1        0       -4    
-   Rickie Marek       13        0-1       0-1        3-4        0         2         2        0        1        0       0       1        3       -2    
-   Herbert Lloyd      11        1-3       0-0        0-0        0         1         1        0        0        1       0       2        2        0    
-   Solomon Leath       1        0-0       0-0        0-0        0         0         0        0        0        0       0       1        0        3    
-    Cary Burris       DNP   
-    Josh Floyd        DNP   
-    Damous King       DNP   
-   Daniel Langhi      DNP   
-       TEAM                    19-49      6-17      16-23       4         25       29       12        3        2       17      19      60          
+Name              Min  FG     3PT   FT     OREB  DREB  REB  AST  STL  BLK  TO  PF  PTS  +/-  
+Isaac Punt        26   2-6    1-3   1-4    1     2     3    6    0    1    3   2   6    0    
+Tony Hedrick      31   5-9    1-4   5-5    0     2     2    2    3    1    2   1   16   4    
+Kyle King         31   5-7    2-2   8-10   1     2     3    0    0    0    0   0   20   2    
+Andrew Broderick  28   1-7    0-0   3-8    1     3     4    1    0    2    0   1   5    -5   
+Corey Mitchell    27   4-10   0-1   4-4    1     5     6    1    0    1    1   3   12   -2   
+Alan King         15   2-2    0-0   0-0    0     4     4    2    0    1    0   2   4    -7   
+Michael Greer     12   3-4    0-0   3-4    0     1     1    0    0    0    0   2   9    1    
+Rashod Branch     11   0-1    0-1   2-2    0     0     0    2    2    0    2   2   2    4    
+Jason Ashman      8    0-0    0-0   2-2    1     0     1    0    2    0    0   1   2    -3   
+Michael Lewis     7    1-2    0-1   0-0    0     0     0    0    1    0    1   2   2    1    
+Lonnie Maxwell    DNP  
+Landon Dixon      DNP  
+Vic Shumpert      DNP  
+Jason Crowley     DNP  
+Mark Dench        DNP  
+TEAM                   23-48  4-12  28-39  5     19    24   14   8    6    9   16  78                 
 ```
