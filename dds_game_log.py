@@ -162,7 +162,15 @@ class FileParser:
 
     def parse_player(self, mm, span):
         name = self.parse_player_name(mm, span)
-        player_iter = PlayerStatIterator(mm, span[1] + 15)
+        # This is a guess that if we have a 4 here it's a conference game
+        # and there's some extra metadata... without this parsing conference
+        # games doesn't work.
+        game_type = int.from_bytes(mm[span[1]: span[1] + 1], 'little', signed=True)
+        metadata_padding = 15
+        if game_type == 4:
+            metadata_padding = 16
+        player_iter = PlayerStatIterator(mm, span[1] + metadata_padding)
+        
 
         def get_starting_position(player_iter):
             _ = next(player_iter)  # garbage value
